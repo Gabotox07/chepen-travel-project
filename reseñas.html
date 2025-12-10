@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas y Testimonios | Chepén Travel</title>
+    
+    <meta name="description" content="Lee las opiniones de otros viajeros o comparte tu experiencia sobre Chepén y nuestra plataforma.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="assets/imagenes/chepen-travel-blanco.png" alt="Logo de Chepén Travel" class="logo-img">
+            <span class="logo-text">CHEPÉN TRAVEL</span>
+        </a>
+        <nav class="main-nav">
+            <a href="explorar.html">Explorar</a>
+            <a href="rutas.html">Rutas</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="negocios.html">Negocios</a>
+            <a href="reseñas.html" class="active">Reseñas</a> <a href="contacto.html">Contacto</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-principal">
+            <div class="hero-overlay">
+                <h2 class="hero-title">Opiniones y Testimonios</h2>
+                <p class="hero-subtitle">Tu experiencia es nuestra mejor recomendación.</p>
+                <div class="hero-actions">
+                    <a href="#reseñas-form" class="btn btn-primary">Dejar mi Opinión</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2>Lo que dicen nuestros viajeros</h2>
+            <div id="reseñas-container" class="reseñas-grid">
+                <p class="text-center">Cargando testimonios...</p>
+            </div>
+        </section>
+
+        <section id="reseñas-form" class="container section-padding form-section">
+            <h2 class="text-center">Comparte tu Experiencia</h2>
+            <form id="add-review-form" class="review-form">
+                
+                <div class="form-group">
+                    <label for="review-name">Tu Nombre:</label>
+                    <input type="text" id="review-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="review-score">Tu Puntuación:</label>
+                    <div id="puntuacion-input" class="puntuacion-stars">
+                        </div>
+                    <input type="hidden" id="review-score" value="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="review-comment">Tu Comentario:</label>
+                    <textarea id="review-comment" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Enviar Reseña</button>
+                <div id="form-message" class="form-message" style="display: none;"></div>
+
+            </form>
+        </section>
+        
+    </main>
+
+    <footer id="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-block">
+                <h4>Chepén Travel</h4>
+                <p>Plataforma turística promocional de la ciudad de Chepén.</p>
+            </div>
+            <div class="footer-block">
+                <h4>Enlaces Rápidos</h4>
+                <a href="explorar.html">Explorar</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="reseñas.html">Reseñas</a>
+            </div>
+            <div class="footer-block">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> info@chepentravel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Municipalidad de Chepén</p>
+            </div>
+            <div class="footer-block">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>© 2025 Chepén Travel. Todos los derechos reservados. | Créditos | Política de Privacidad</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script> 
+    <script src="js/carrusel.js"></script> 
+    <script src="js/reseñas.js"></script> </body>
+</html>

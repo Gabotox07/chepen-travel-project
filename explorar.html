@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Chepén | Destinos Turísticos</title>
+    
+    <meta name="description" content="Descubre todos los atractivos turísticos de Chepén, filtrados por historia, naturaleza, cultura y gastronomía.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="assets/imagenes/chepen-travel-blanco.png" alt="Logo de Chepén Travel" class="logo-img">
+            <span class="logo-text">CHEPÉN TRAVEL</span>
+        </a>
+        <nav class="main-nav">
+            <a href="explorar.html" class="active">Explorar</a> <a href="rutas.html">Rutas</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="negocios.html">Negocios</a>
+            <a href="reseñas.html">Reseñas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-principal">
+            <div class="hero-overlay">
+                <h2 class="hero-title">Explora los Destinos Turísticos de Chepén</h2>
+                <p class="hero-subtitle">Descubre huacas, paisajes naturales y la riqueza cultural de la provincia.</p>
+                <div class="hero-actions">
+                    <a href="#explorar-content" class="btn btn-secondary">Ver Destinos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="explorar-content" class="container section-padding">
+            
+            <div class="filters-panel">
+                <h3>Filtrar por Categoría</h3>
+                <div class="filter-buttons">
+                    <button class="btn btn-filter active" data-filter="all">Todas las Categorías</button>
+                    <button class="btn btn-filter" data-filter="Historia">Historia</button>
+                    <button class="btn btn-filter" data-filter="Cultura">Cultura</button>
+                    <button class="btn btn-filter" data-filter="Naturaleza">Naturaleza</button>
+                    <button class="btn btn-filter" data-filter="Gastronomia">Gastronomía</button>
+                </div>
+            </div>
+
+            <div id="lugares-grid" class="experiencias-grid">
+                <p class="text-center">Cargando destinos...</p>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer id="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-block">
+                <h4>Chepén Travel</h4>
+                <p>Plataforma turística promocional de la ciudad de Chepén.</p>
+            </div>
+            <div class="footer-block">
+                <h4>Enlaces Rápidos</h4>
+                <a href="explorar.html">Explorar</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="index.html#reseñas">Reseñas</a>
+            </div>
+            <div class="footer-block">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> info@chepentravel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Municipalidad de Chepén</p>
+            </div>
+            <div class="footer-block">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2025 Chepén Travel. Todos los derechos reservados. | Créditos | Política de Privacidad</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script> 
+    <script src="js/carrusel.js"></script> <script src="js/filtros.js"></script> </body>
+</html>
