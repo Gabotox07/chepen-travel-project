@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "nombre": "Vía Crusis",
+        "descripcion": "Conjunto de 23 esculturas que representan la Pasión de Cristo. Es un lugar de fe y de caminatas.",
+        "categoria": "Historia",
+        "imagen": "via-crucis09.jpg" 
+    },
+
+    {
+        "id": 2,
+        "nombre": "Iglesia San Sebastián",
+        "descripcion": "Iglesia principal del distrito, conocida por su arquitectura sencilla y su importancia religiosa.",
+        "categoria": "Historia",
+        "imagen": "iglesia.jpg"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Plaza de Armas",
+        "descripcion": "Punto central de la ciudad, rodeada por la iglesia, comercios y edificios representativos.",
+        "categoria": "Cultura",
+        "imagen": "plaza.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "La Blanquirroja",
+        "descripcion": "Cevichería ubicada en la parte alta de Chepén, conocida por su buen sabor y ambiente familiar.",
+        "categoria": "Gastronomia",
+        "imagen": "blanquirroja02.jpg"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Ex Hacienda Talambo",
+        "descripcion": "Antigua hacienda agrícola del siglo XIX, reconocida por su arquitectura tradicional.",
+        "categoria": "Historia",
+        "imagen": "talambo.jpg"
+    },
+
+    {
+        "id": 6,
+        "nombre": "Campos Chepén",
+        "descripcion": "Extensas áreas agrícolas que rodean la ciudad, destacadas por sus cultivos de arroz, caña y maíz, ofreciendo paisajes verdes y característicos del valle.",
+        "categoria": "Naturaleza",
+        "imagen": "chepen01.jpg"
+    },
+
+    {
+        "id": 7,
+        "nombre": "La Caleta Picante",
+        "descripcion": "Cevichería popular en Chepén, conocida por su sabor intenso, platos frescos y ambiente tradicional.",
+        "categoria": "Gastronomia",
+        "imagen": "caleta.jpg"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Playa Chérrepe",
+        "descripcion": "Balneario tradicional de pescadores, conocido por su ambiente tranquilo, mar limpio y hermosos atardeceres ideales para relajarse.",
+        "categoria": "Naturaleza",
+        "imagen": "cherrepe.jpg"
+    }
+]

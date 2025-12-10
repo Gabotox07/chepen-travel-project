@@ -1,0 +1,43 @@
+[
+    {
+        "id": "cultural",
+        "nombre": "Ruta Cultural e Histórica",
+        "descripcion": "Recorrido por los principales sitios arqueológicos y religiosos de Chepén y sus alrededores.",
+        "duracion": "4 horas (estimada)",
+        "transporte": "Vehículo / Tour Guiado",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15814.072834778095!2d-79.57529648937988!3d-7.221528438101413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x904a60b933d74965%3a0x266851121c272719!2sPlaza%20de%20Armas%20de%20Chep%C3%A9n!3m2!1d-7.2217647!2d-79.5779691!4m5!1s0x904a62e3d3049185%3a0x711c1d93a8e99920!2sV%C3%ADa%20Crucis%20Cerro%20Chep%C3%A9n!3m2!1d-7.21855!2d-79.5694!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe",
+        "puntos": [
+            "Punto de Partida: Plaza de Armas",
+            "Punto 2: Iglesia San Sebastián",
+            "Punto 3: Vía Crucis (Subida al Cerro Chepén)",
+            "Punto Final: Ex Hacienda Talambo"
+        ]
+    },
+    {
+        "id": "gastronomica",
+        "nombre": "Ruta del Sabor Chepenano",
+        "descripcion": "Un recorrido por los sabores más intensos de la gastronomía local, desde el ceviche hasta los platos campestres.",
+        "duracion": "2.5 horas (Almuerzo y Cena)",
+        "transporte": "A Pie / Moto Taxi",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31627.06903730316!2d-79.58804473367123!3d-7.228519696328373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x904a60b933d74965%3a0x266851121c272719!2sPlaza%20de%20Armas%20de%20Chep%C3%A9n!3m2!1d-7.2217647!2d-79.5779691!4m5!1s0x904a60c5c567817b%3a0x7d02390a42426915!2sLa%20Caleta%20Picante!3m2!1d-7.2180862!2d-79.5828775!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe",
+        "puntos": [
+            "Punto de Partida: Plaza de Armas (Merienda rápida)",
+            "Punto 2: La Blanquirroja (Cevichería Destacada)",
+            "Punto 3: La Caleta Picante (Sazón Campestre)",
+            "Punto Final: Degustación de postres locales"
+        ]
+    },
+    {
+        "id": "ecologica",
+        "nombre": "Ruta Ecológica: Campo y Mar",
+        "descripcion": "Recorrido enfocado en los paisajes naturales, el campo verde de Chepén y la costa de Chérrepe.",
+        "duracion": "Todo el día",
+        "transporte": "Vehículo Particular",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d131661.12781442116!2d-79.78913950444583!3d-7.181977717467657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x904a60b933d74965%3a0x266851121c272719!2sPlaza%20de%20Armas%20de%20Chep%C3%A9n!3m2!1d-7.2217647!2d-79.5779691!4m5!1s0x904a65471d46797b%3a0x9219b109e663a70b!2sPlaya%20Ch%C3%A9rrepe!3m2!1d-7.30159!2d-79.5441!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe",
+        "puntos": [
+            "Punto de Partida: Campos Chepén (Zona agrícola)",
+            "Punto 2: Ruta a la costa",
+            "Punto Final: Playa Chérrepe (Descanso y Almuerzo)"
+        ]
+    }
+]

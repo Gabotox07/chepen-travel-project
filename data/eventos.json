@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "El Gran Corso del Norte",
+        "fecha": "3er domingo de Noviembre",
+        "lugar": "Calles Principales de Chepén",
+        "descripcion": "Fiesta local llena de color y tradición, con comparsas, carros alegóricos y música que recorren las principales calles celebrando la identidad del pueblo.",
+        "imagen": "corso01.jpg",
+        "tipo": "Cultural"
+    },
+    {
+        "id": 2,
+        "nombre": "Fiesta en Honor a San Sebastian",
+        "fecha": "20 de Enero",
+        "lugar": "Iglesia San Sebastian - Calles Centrales",
+        "descripcion": "Celebración religiosa tradicional con procesiones, misas y actividades culturales que reúnen a la comunidad chepenana en devoción al santo.",
+        "imagen": "sheba.jpg",
+        "tipo": "Religioso"
+    },
+    {
+        "id": 3,
+        "nombre": "Semana Santa del Cerro Chepén",
+        "fecha": "Marzo/Abril (Variable)",
+        "lugar": "Cerro Chepén - Vía Crucis",
+        "descripcion": "La festividad religiosa más importante de la región. Miles de peregrinos ascienden al cerro, culminando con misas especiales.",
+        "imagen": "via-crucis01.jpg",
+        "tipo": "Religioso"
+    },
+    {
+        "id": 4,
+        "nombre": "Fiesta en honor a Santa Rosa de Lima",
+        "fecha": "30 de Agosto",
+        "lugar": "Av. E. Gonzales Cáceda",
+        "descripcion": "Festividad local marcada por actos litúrgicos, música y eventos comunitarios dedicados a Santa Rosa, patrona de gran devoción en la zona.",
+        "imagen": "rosa.jpg",
+        "tipo": "Religioso"
+    }
+]

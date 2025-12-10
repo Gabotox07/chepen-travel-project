@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Marta G.",
+        "puntuacion": 5,
+        "comentario": "Chepén Travel fue fundamental para planificar mi ruta al Cerro Chepén. La información es muy precisa y el directorio de negocios me ayudó a encontrar un excelente hotel.",
+        "fecha": "2025-10-25"
+    },
+    {
+        "id": 2,
+        "nombre": "Luis P.",
+        "puntuacion": 4,
+        "comentario": "Me encantó la Ruta Gastronómica. La sección de eventos me alertó sobre una feria local que fue fantástica. ¡Muy recomendable!",
+        "fecha": "2025-11-01"
+    },
+    {
+        "id": 3,
+        "nombre": "Andrea R.",
+        "puntuacion": 5,
+        "comentario": "El diseño de la página es limpio y moderno. Es la mejor plataforma para conocer los atractivos de Chepén.",
+        "fecha": "2025-11-15"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Hotel Chepén",
+        "descripcion": "Alojamiento con vistas a la Plaza de Armas de Chepén, ideal para un descanso tranquilo.",
+        "categoria": "Alojamiento",
+        "imagen": "hotel-chepen.jpg",
+        "nivel": "Premium",
+        "contacto": "+51 987 654 321"
+    },
+    {
+        "id": 2,
+        "nombre": "Cevichería La Caleta Picante",
+        "descripcion": "Especializados en pescados, mariscos y platos marinos con ingredientes frescos de la región.",
+        "categoria": "Gastronomía",
+        "imagen": "caleta.jpg",
+        "nivel": "Premium",
+        "contacto": "+51 912 345 678"
+    },
+    {
+        "id": 3,
+        "nombre": "Pizzeria Artesana",
+        "descripcion": "Tienda que ofrece recuerdos únicos, cerámica y textiles hechos a mano por artesanos locales.",
+        "categoria": "Tiendas",
+        "imagen": "artesana.jpg",
+        "nivel": "Premium",
+        "contacto": "+51 998 877 665"
+    },
+    {
+        "id": 4,
+        "nombre": "Gimnasio Yoofit",
+        "descripcion": "Ofrece tours guiados a los principales sitios arqueológicos y rutas ecológicas de la zona.",
+        "categoria": "Servicios",
+        "imagen": "yoofit.jpg",
+        "nivel": "Premium",
+        "contacto": "+51 977 766 554"
+    },
+    {
+        "id": 5,
+        "nombre": "Polleria Andinos Chicken",
+        "descripcion": "Hostal económico y céntrico, perfecto para viajeros que buscan comodidad y buen precio.",
+        "categoria": "Alojamiento",
+        "imagen": "andinos.jpg",
+        "nivel": "Basico",
+        "contacto": "+51 966 554 433"
+    },
+    {
+        "id": 6,
+        "nombre": "Cevichería D' Costumbre",
+        "descripcion": "Hostal económico y céntrico, perfecto para viajeros que buscan comodidad y buen precio.",
+        "categoria": "Alojamiento",
+        "imagen": "dcostumbre.jpg",
+        "nivel": "Basico",
+        "contacto": "+51 966 554 433"
+    },
+    {
+        "id": 7,
+        "nombre": "La Blanquirroja",
+        "descripcion": "Hostal económico y céntrico, perfecto para viajeros que buscan comodidad y buen precio.",
+        "categoria": "Alojamiento",
+        "imagen": "blanquirroja.jpg",
+        "nivel": "Basico",
+        "contacto": "+51 966 554 433"
+    },
+    {
+        "id": 8,
+        "nombre": "El Tío Fit",
+        "descripcion": "Hostal económico y céntrico, perfecto para viajeros que buscan comodidad y buen precio.",
+        "categoria": "Alojamiento",
+        "imagen": "tiofit.jpg",
+        "nivel": "Basico",
+        "contacto": "+51 966 554 433"
+    }
+]
