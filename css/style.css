@@ -1,0 +1,1013 @@
+/* VARIABLES CSS para Modo Oscuro [cite: 139, 253] */
+:root {
+    --color-primary: #006064; /* Turquesa oscuro */
+    --color-secondary: #ffc107; /* Amarillo/Dorado para acentos */
+    --color-background: #ffffff;
+    --color-text: #333;
+    --color-light-gray: #f4f4f4;
+    --color-dark-gray: #555;
+    --header-height: 60px;
+}
+
+/* Tema Oscuro [cite: 139, 253] */
+.dark-mode {
+    --color-background: #121212;
+    --color-text: #f4f4f4;
+    --color-light-gray: #1e1e1e;
+    --color-dark-gray: #aaa;
+    --color-primary: #4db6ac; /* Turquesa más claro */
+}
+
+/* ------------------------------------- */
+/* ESTILOS GLOBALES Y RESET */
+/* ------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Google Fonts [cite: 154] */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------------- */
+/* 1. HEADER DE NAVEGACIÓN [cite: 19, 299] */
+/* ------------------------------------- */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    height: var(--header-height);
+    z-index: 1000;
+    /* Estilo para el efecto sticky (se implementará con JS) */
+    position: fixed; 
+    width: 100%;
+    border-bottom: 1px solid var(--color-light-gray);
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+/*
+.logo {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}*/
+
+/* --- NUEVOS ESTILOS PARA EL LOGO IMAGEN --- */
+
+.logo-link {
+    /* Mantenemos flex para alinear verticalmente el logo y el texto */
+    display: flex; 
+    align-items: center;
+    /* Para que el enlace ocupe toda la altura */
+    height: var(--header-height); 
+    color: var(--color-primary); /* Color para el texto del logo */
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 70px; /* ¡AUMENTADO el tamaño de la imagen! */
+    width: auto; 
+    transition: all 0.3s;
+    /* Espacio entre la imagen y el texto */
+    margin-right: 10px; 
+}
+
+.logo-text {
+    font-size: 1.2rem; /* Tamaño ligeramente más pequeño que un h1 (1.5rem) */
+    font-weight: 700; /* Negrita */
+    color: var(--color-primary);
+    /* Opcional: Ocultar texto en móviles si solo se quiere mostrar el ícono/imagen */
+}
+
+/* Ajuste del logo para pantallas más pequeñas (opcional, si quieres que la imagen se vea un poco más chica en móviles) */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px; 
+    }
+    .logo-text {
+        font-size: 1rem;
+    }
+}
+
+.main-nav a {
+    color: var(--color-dark-gray);
+    margin-left: 25px;
+    padding: 5px 0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Botones de utilidades */
+#theme-toggle, .nav-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.nav-toggle {
+    display: none; 
+}
+
+
+.hero-principal {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('../assets/imagenes/via-crucis03.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: var(--header-height); 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 10px;
+    /* Tipografía gigante [cite: 300] */
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: #f0f0f0;
+    margin-bottom: 40px;
+}
+
+.hero-actions a {
+    margin: 0 15px;
+}
+
+/* ------------------------------------- */
+/* MEDIA QUERIES (Diseño Responsivo) [cite: 19, 121] */
+/* ------------------------------------- */
+@media (max-width: 768px) {
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .main-nav {
+        /* Menú colapsable para móviles */
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-background);
+        border-top: 1px solid var(--color-light-gray);
+        flex-direction: column;
+        display: none; /* Inicialmente oculto */
+        padding: 10px 0;
+    }
+
+    .main-nav.active {
+        display: flex; /* Mostrar cuando se active con JS */
+    }
+
+    .main-nav a {
+        margin: 10px 0;
+        padding: 10px 30px;
+        border-bottom: 1px solid var(--color-light-gray);
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block; /* Mostrar botón de menú */
+    }
+}
+
+/* Puedes añadir estilos adicionales aquí para otras secciones */
+
+/* ------------------------------------- */
+/* 2. BANNER DE PÁGINAS INTERNAS */
+/* ------------------------------------- */
+.page-banner {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+    margin-top: var(--header-height); /* Desplaza hacia abajo por el header fijo */
+}
+
+.page-banner h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* ------------------------------------- */
+/* 3. PANEL DE FILTROS */
+/* ------------------------------------- */
+
+.filters-panel {
+    text-align: center;
+    margin-bottom: 50px; /* Aumento de espacio inferior */
+    padding: 20px 0; /* Eliminamos padding lateral que podría causar problemas */
+    /* Quitamos el border-bottom para darle un aspecto más limpio si no se necesita */
+    /* border-bottom: 1px solid var(--color-light-gray); */ 
+}
+
+.filters-panel h3 {
+    font-size: 1.6rem; /* Ligeramente más grande */
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Más espacio entre los botones */
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    background-color: var(--color-light-gray);
+    color: var(--c);
+    border: 1px solid var(--color-light-gray); /* Añadimos borde sutil */
+    padding: 10px 20px;
+    border-radius: 25px; /* Más redondeado */
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-filter:hover {
+    background-color: #d8d8d8; /* Cambio de color más notable al pasar el mouse */
+    color: var(--color-text);
+}
+
+.btn-filter.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 5px rgba(0, 96, 100, 0.3); /* Sombra para resaltar el activo */
+}
+
+/* Ajuste de diseño responsivo para filtros */
+@media (max-width: 600px) {
+    .filter-buttons {
+        /* Mantenemos el justify-content para centrar, pero el flex-wrap hace el trabajo */
+        justify-content: space-around; 
+    }
+    .btn-filter {
+        width: 45%; /* Permite 2 botones por fila */
+        margin-bottom: 10px; /* Espacio entre filas */
+    }
+}
+
+
+/* ------------------------------------- */
+/* 4. EXPERIENCIAS (Estructura de tarjetas) */
+/* ------------------------------------- */
+
+.experiencia-card-content {
+    padding: 20px; 
+}
+
+.card-category {
+    margin-bottom: 5px; 
+}
+
+.experiencia-card-content h3 {
+
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.experiencia-card-content p {
+    line-height: 1.5;
+    margin-bottom: 15px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* ESTE VALOR CONTROLA EL ESPACIO EN LOS COSTADOS */
+    padding: 0 20px; 
+}
+
+.experiencias-grid {
+    /* Nos aseguramos de que siempre haya al menos dos columnas en la mayoría de dispositivos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.experiencia-card {
+    /* Fondo para que resalte */
+    background-color: var(--color-background); 
+    border-radius: 8px;
+    overflow: hidden;
+    /* Sombra más profesional */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.experiencia-card-content {
+    padding: 15px 25px; 
+}
+
+.experiencia-card-content p {
+    margin-bottom: 15px; 
+    font-size: 0.95rem; 
+}
+
+.experiencia-card:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experiencia-card img {
+    width: 100%;
+    height: 260px; /* Un poco más de altura para la imagen */
+    object-fit: cover;
+}
+
+/* ------------------------------------- */
+/* 10. FOOTER */
+/* ------------------------------------- */
+#main-footer {
+    /* Fondo oscuro para contraste */
+    background-color: var(--color-background); 
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-grid {
+    /* Distribuye los bloques en columnas, adaptable a pantallas pequeñas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; /* Espacio entre las columnas */
+    padding-bottom: 40px;
+}
+
+.footer-block h4 {
+    /* Título del bloque (ej: Enlaces Rápidos) */
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: left; /* Alineación por defecto */
+}
+
+.footer-block p, .footer-block a {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.footer-block a {
+    /* Estilo para los enlaces del footer */
+    display: block;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-block a:hover {
+    color: var(--color-primary); /* Resaltar al pasar el mouse */
+}
+
+.footer-block i {
+    /* Iconos de contacto (sobre, ubicación) */
+    margin-right: 8px;
+    color: var(--color-primary);
+}
+
+/* Enlaces de Redes Sociales */
+.social-links a {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--color-text);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Créditos finales */
+.footer-credits {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+
+/* Media Query para Responsividad */
+@media (max-width: 768px) {
+    .footer-grid {
+        /* En pantallas pequeñas, apilamos los bloques verticalmente */
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-block h4 {
+        text-align: center;
+    }
+    
+    .footer-block p, .footer-block a {
+        /* Centramos el texto dentro del bloque */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer-block i {
+        /* Quitamos margen izquierdo para centrar iconos en el texto */
+        margin-left: 0;
+    }
+    
+    .social-links {
+        /* Aseguramos que los iconos sociales estén centrados */
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ------------------------------------- */
+/* 5. RUTAS TURÍSTICAS (Estilos de Contenido) */
+/* ------------------------------------- */
+
+.section-padding {
+    padding: 30px 0; 
+}
+
+#rutas-listado h2 {
+    margin-bottom: 30px; 
+}
+
+.ruta-card-detail {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-light-gray);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ruta-header {
+    padding: 20px;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ruta-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.ruta-info {
+    font-size: 0.9rem;
+}
+
+.ruta-info i {
+    margin-right: 5px;
+}
+
+.ruta-content {
+    padding: 30px 20px;
+}
+
+.ruta-content h4 {
+    color: var(--color-primary);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted var(--color-light-gray);
+    padding-bottom: 5px;
+}
+
+.ruta-pasos {
+    list-style: none;
+    padding: 0;
+}
+
+.ruta-pasos li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.ruta-pasos li:last-child {
+    border-bottom: none;
+}
+
+
+/* ------------------------------------- */
+/* MODAL GENERAL (Para mapas, videos, etc.) */
+/* ------------------------------------- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que esté encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); /* Fondo oscuro transparente */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    margin: 5% auto; /* 5% arriba y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 900px; /* Ancho máximo para desktop */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.map-embed-container {
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.map-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+
+/* ------------------------------------- */
+/* 6. EVENTOS Y FESTIVIDADES (Tarjetas) */
+/* ------------------------------------- */
+
+.evento-card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.evento-card-content h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+
+    margin-bottom: 8px; 
+    color: var(--color-text);
+}
+
+.evento-card-content .lugar {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin-bottom: 12px; 
+}
+
+.evento-card-content p {
+    line-height: 1.5;
+    margin-bottom: 20px; 
+}
+
+#eventos-listado h2 {
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.evento-card {
+    /* Basado en .experiencia-card, pero con un diseño diferente si es necesario */
+    background-color: var(--color-background); 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.evento-card-header {
+    position: relative;
+    height: 230px; /* Altura fija para la imagen */
+    overflow: hidden;
+}
+
+.evento-card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.evento-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 10; /* Asegura que la fecha esté encima de la imagen */
+}
+
+.evento-card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.evento-card-content h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.evento-card-content .lugar {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.eventos-filtros {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------- */
+/* 7. NEGOCIOS TURÍSTICOS (Tarjetas y Niveles) */
+/* ------------------------------------- */
+
+#negocios-listado h2 {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+/*
+.negocios-filtros h3 {
+    margin-bottom: 25px; 
+    font-size: 1.4rem; 
+    color: var(--color-text);
+}*/
+
+.negocios-filtros {
+    text-align: center;
+    margin-bottom: 50px; 
+}
+
+.negocio-card-content h3 {
+    font-size: 1.4rem; 
+    margin-top: 0; 
+    margin-bottom: 5px; 
+    color: var(--color-text);
+}
+
+.negocio-card-content .card-category {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 12px; 
+    display: block; 
+}
+
+.negocio-card-content p:not(.contacto) {
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+}
+
+.negocio-card-content .contacto {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin-top: 10px;
+    margin-bottom: 15px; 
+}
+
+.negocio-card {
+    background-color: var(--color-background); 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-primary); 
+}
+
+.negocio-card-header {
+    position: relative; 
+    height: 220px; 
+    overflow: hidden; 
+}
+
+.negocio-card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* El estilo Premium (Monetización) */
+.negocio-card.premium {
+    /* Borde destacado (simulando dorado o un color de alta visibilidad) */
+    border: 3px solid #07b39f; /* Dorado */
+    box-shadow: 0 8px 20px rgba(3, 105, 95, 0.308); /* Sombra de oro */
+}
+
+/* Etiqueta Premium que aparece en la esquina */
+.negocio-card.premium .premium-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #009994; /* Dorado */
+    color: var(--color-text);
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom-left-radius: 8px;
+    z-index: 5;
+}
+
+.negocio-card-content {
+    padding: 20px;
+}
+
+.negocio-card-content .contacto {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* ------------------------------------- */
+/* 8. RESEÑAS Y TESTIMONIOS */
+/* ------------------------------------- */
+
+.reseñas-grid {
+    /* Implementación de Scroll Horizontal (El diseño de tarjetas) */
+    display: flex;
+    overflow-x: auto; /* Permite el scroll horizontal */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px 0; /* Padding vertical para que se vea el scrollbar */
+    /* Estilos para ocultar el scrollbar por defecto en algunos navegadores (opcional) */
+    /* scrollbar-width: none; */ 
+    /* &::-webkit-scrollbar { display: none; } */
+}
+
+.reseña-card {
+    /* La tarjeta debe tener un ancho fijo para forzar el scroll */
+    min-width: 320px; 
+    max-width: 320px;
+    background-color: var(--color-light-gray);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0; /* Evita que las tarjetas se compriman */
+}
+
+.reseña-card h4 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.reseña-card p {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.puntuacion-stars .fas.fa-star {
+    color: gold; /* Color de las estrellas */
+    font-size: 1.1rem;
+    margin-right: 2px;
+}
+
+.reseña-fecha {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ------------------------------------- */
+/* ESTILOS DEL FORMULARIO DE RESEÑAS */
+/* ------------------------------------- */
+.form-section {
+    background-color: var(--color-background);
+    padding: 50px 0;
+}
+
+.review-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.puntuacion-stars {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+.puntuacion-stars .star {
+    cursor: pointer;
+    color: #ccc; /* Estrellas grises por defecto */
+    transition: color 0.2s;
+}
+
+.puntuacion-stars .star.selected,
+.puntuacion-stars .star:hover {
+    color: gold;
+}
+
+.btn-full-width {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+}
+
+.form-message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ------------------------------------- */
+/* 9. CONTACTO Y FORMULARIO */
+/* ------------------------------------- */
+
+
+
+@media (min-width: 900px) {
+    .contact-info-grid {
+        grid-template-columns: 1.2fr 1fr; /* Más espacio para la info que para el mapa */
+    }
+}
+
+.contact-info-grid h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+    text-align: left;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details strong {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.contact-icon {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    width: 30px; /* Asegura alineación vertical */
+    text-align: center;
+}
+
+/* El formulario de contacto reutiliza las clases .review-form y .form-group */
+#contacto-form h2 {
+    color: var(--color-text);
+}
